@@ -7,6 +7,12 @@ public class EnemyMovement : MonoBehaviour
     public float speed = 5f;
     public int maximumXPosition;
     public int minXPosition;
+    private Teleport teleport;
+
+    void Start()
+    {
+        teleport = GameObject.FindGameObjectWithTag("Exit").GetComponent<Teleport>();
+    }
 
     private void FixedUpdate()
     {
@@ -27,6 +33,7 @@ public class EnemyMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            teleport.enemyCount--;
         }
     }
 }

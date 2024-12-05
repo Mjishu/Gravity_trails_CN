@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - ThrowingObject
   - Projectile
+  - Exit
+  - Fruit
+  - Trap
   layers:
   - Default
   - TransparentFX
